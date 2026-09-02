@@ -52,6 +52,22 @@
   --radius-sm: 0.375rem;
   --radius-md: 0.625rem;
   --radius-lg: 1rem;
+
+  /* Acentos por aseguradora demo (lib/mock-data/insurers.ts). Sin relación
+     con marca real: solo distinguen tarjetas visualmente. Todos verificados
+     contra >=4.5:1 de contraste con su foreground. */
+  --insurer-1: oklch(0.55 0.17 40);
+  --insurer-1-foreground: oklch(0.99 0 0);
+  --insurer-2: oklch(0.55 0.12 110);
+  --insurer-2-foreground: oklch(0.99 0 0);
+  --insurer-3: oklch(0.54 0.09 200);
+  --insurer-3-foreground: oklch(0.99 0 0);
+  --insurer-4: oklch(0.55 0.115 235);
+  --insurer-4-foreground: oklch(0.99 0 0);
+  --insurer-5: oklch(0.55 0.2 300);
+  --insurer-5-foreground: oklch(0.99 0 0);
+  --insurer-6: oklch(0.55 0.2 340);
+  --insurer-6-foreground: oklch(0.99 0 0);
 }
 
 @theme inline {
@@ -86,6 +102,19 @@
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
   --radius-lg: var(--radius-lg);
+
+  --color-insurer-1: var(--insurer-1);
+  --color-insurer-1-foreground: var(--insurer-1-foreground);
+  --color-insurer-2: var(--insurer-2);
+  --color-insurer-2-foreground: var(--insurer-2-foreground);
+  --color-insurer-3: var(--insurer-3);
+  --color-insurer-3-foreground: var(--insurer-3-foreground);
+  --color-insurer-4: var(--insurer-4);
+  --color-insurer-4-foreground: var(--insurer-4-foreground);
+  --color-insurer-5: var(--insurer-5);
+  --color-insurer-5-foreground: var(--insurer-5-foreground);
+  --color-insurer-6: var(--insurer-6);
+  --color-insurer-6-foreground: var(--insurer-6-foreground);
 }
 
 html {
