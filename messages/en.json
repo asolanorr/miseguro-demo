@@ -16,6 +16,60 @@
       "rights": "All rights reserved."
     }
   },
+  "landing": {
+    "demoNotice": "MiSeguro is in demo mode: the prices you'll see are simulated.",
+    "hero": {
+      "title": "Compare car insurance in minutes, no calls or paperwork",
+      "subtitle": "Tell us about you and your vehicle, and we'll show you options from several insurers side by side.",
+      "cta": "Get a free quote"
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "steps": {
+        "step1": {
+          "title": "Tell us about you",
+          "description": "Profile, vehicle, driver, and the coverage you're after."
+        },
+        "step2": {
+          "title": "We compare for you",
+          "description": "See price, deductible, and coverage from several insurers at once."
+        },
+        "step3": {
+          "title": "Pick the best option",
+          "description": "Leave your details and an advisor will help you move forward."
+        }
+      }
+    },
+    "insurers": {
+      "title": "Insurers we compare in this demo",
+      "note": "Demo names. We don't have active partnerships with real insurers yet."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": {
+        "q1": {
+          "question": "Is this a real quote?",
+          "answer": "No. All amounts are for demonstration purposes, to show how the comparator would work. They don't represent a real offer from any insurer."
+        },
+        "q2": {
+          "question": "Do I have to pay anything to use the comparator?",
+          "answer": "No, comparing is free and we never ask for payment details."
+        },
+        "q3": {
+          "question": "What happens with my data if I leave my contact details?",
+          "answer": "We only use it so an advisor can contact you about this demo, in accordance with Law 8968. You can ask us to delete it at any time."
+        },
+        "q4": {
+          "question": "Which insurers do you work with?",
+          "answer": "We don't have active partnerships yet; this demo uses fictitious names to show what the comparison would look like."
+        },
+        "q5": {
+          "question": "How long does my quote take to show up?",
+          "answer": "The demo comparison takes a few seconds to generate."
+        }
+      }
+    }
+  },
   "quote": {
     "stepper": {
       "profile": "Profile",

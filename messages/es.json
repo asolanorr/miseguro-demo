@@ -16,6 +16,60 @@
       "rights": "Todos los derechos reservados."
     }
   },
+  "landing": {
+    "demoNotice": "MiSeguro está en fase de demostración: los precios que vas a ver son simulados.",
+    "hero": {
+      "title": "Comparás seguros de auto en minutos, sin llamadas ni papeleo",
+      "subtitle": "Contanos sobre vos y tu vehículo, y te mostramos opciones de varias aseguradoras lado a lado.",
+      "cta": "Cotizar gratis"
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "steps": {
+        "step1": {
+          "title": "Contanos sobre vos",
+          "description": "Perfil, vehículo, conductor y la cobertura que buscás."
+        },
+        "step2": {
+          "title": "Comparamos por vos",
+          "description": "Vemos precio, deducible y cobertura de varias aseguradoras a la vez."
+        },
+        "step3": {
+          "title": "Elegís la mejor opción",
+          "description": "Dejanos tus datos y un asesor te ayuda a avanzar con el trámite."
+        }
+      }
+    },
+    "insurers": {
+      "title": "Aseguradoras que comparamos en esta demo",
+      "note": "Nombres de demostración. Todavía no tenemos convenios activos con aseguradoras reales."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": {
+        "q1": {
+          "question": "¿Esto es una cotización real?",
+          "answer": "No. Todos los montos son de demostración, para mostrar cómo funcionaría el comparador. No representan una oferta real de ninguna aseguradora."
+        },
+        "q2": {
+          "question": "¿Tengo que pagar algo para usar el comparador?",
+          "answer": "No, comparar es gratis y no te pedimos datos de pago."
+        },
+        "q3": {
+          "question": "¿Qué pasa con mis datos si dejo mi información de contacto?",
+          "answer": "Los usamos únicamente para que un asesor te contacte sobre esta demo, conforme a la Ley 8968. Podés pedir que los eliminemos cuando quieras."
+        },
+        "q4": {
+          "question": "¿Con qué aseguradoras trabajan?",
+          "answer": "Todavía no tenemos convenios activos; esta demo usa nombres ficticios para mostrar cómo se vería la comparación."
+        },
+        "q5": {
+          "question": "¿Cuánto tarda en aparecer mi cotización?",
+          "answer": "La comparación de demostración tarda unos segundos en generarse."
+        }
+      }
+    }
+  },
   "quote": {
     "stepper": {
       "profile": "Perfil",
