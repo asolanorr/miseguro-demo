@@ -176,6 +176,28 @@
         "lowest": "Lowest offer",
         "highest": "Highest offer",
         "difference": "Annual difference"
+      },
+      "cta": "I'm interested in this option",
+      "generalCta": "I want to be contacted"
+    },
+    "lead": {
+      "title": "Leave us your details",
+      "description": "An advisor will reach out to talk through this demo quote.",
+      "fullName": {
+        "label": "Full name"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Phone (optional)"
+      },
+      "submit": "Submit",
+      "successToast": "Done! We received your details. Someone from our team will reach out soon. Remember the amounts shown are a simulation, not a firm quote or a policy.",
+      "errorToast": "We couldn't submit your details. Please try again.",
+      "errors": {
+        "fullName": "Enter your full name",
+        "email": "Enter a valid email"
       }
     }
   },

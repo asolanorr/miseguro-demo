@@ -22,11 +22,17 @@ type QuoteResultsListProps = {
   offers: QuoteOffer[];
   insurers: Insurer[];
   defaultLevel: CoverageLevel;
+  onSelectOffer: (offerId: string) => void;
 };
 
 const LEVELS: CoverageLevel[] = ["liability", "extended", "full"];
 
-export function QuoteResultsList({ offers, insurers, defaultLevel }: QuoteResultsListProps) {
+export function QuoteResultsList({
+  offers,
+  insurers,
+  defaultLevel,
+  onSelectOffer,
+}: QuoteResultsListProps) {
   const t = useTranslations("quote.results");
   const tLevels = useTranslations("coverage.levels");
 
@@ -122,11 +128,16 @@ export function QuoteResultsList({ offers, insurers, defaultLevel }: QuoteResult
             key={offer.id}
             offer={offer}
             insurer={insurersById.get(offer.insurerId)}
+            onSelect={() => onSelectOffer(offer.id)}
           />
         ))}
       </div>
 
-      <QuoteCompareTable offers={filteredAndSorted} insurersById={insurersById} />
+      <QuoteCompareTable
+        offers={filteredAndSorted}
+        insurersById={insurersById}
+        onSelectOffer={onSelectOffer}
+      />
     </div>
   );
 }

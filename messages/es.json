@@ -176,6 +176,28 @@
         "lowest": "Oferta más baja",
         "highest": "Oferta más alta",
         "difference": "Diferencia anual"
+      },
+      "cta": "Me interesa esta opción",
+      "generalCta": "Quiero que me contacten"
+    },
+    "lead": {
+      "title": "Dejanos tus datos",
+      "description": "Un asesor te va a contactar para conversar sobre esta cotización de demostración.",
+      "fullName": {
+        "label": "Nombre completo"
+      },
+      "email": {
+        "label": "Correo electrónico"
+      },
+      "phone": {
+        "label": "Teléfono (opcional)"
+      },
+      "submit": "Enviar",
+      "successToast": "¡Listo! Recibimos tus datos. Alguien de nuestro equipo te va a contactar pronto. Recordá que los montos mostrados son una simulación, no una cotización en firme ni una póliza.",
+      "errorToast": "No pudimos enviar tus datos. Probá de nuevo.",
+      "errors": {
+        "fullName": "Ingresá tu nombre completo",
+        "email": "Ingresá un correo electrónico válido"
       }
     }
   },

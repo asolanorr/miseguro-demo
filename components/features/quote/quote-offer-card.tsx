@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { DemoBadge } from "@/components/ui/demo-badge";
 import { InsurerAvatar } from "@/components/features/quote/insurer-avatar";
@@ -9,9 +10,10 @@ import { formatCrc } from "@/lib/utils";
 type QuoteOfferCardProps = {
   offer: QuoteOffer;
   insurer: Insurer | undefined;
+  onSelect: () => void;
 };
 
-export function QuoteOfferCard({ offer, insurer }: QuoteOfferCardProps) {
+export function QuoteOfferCard({ offer, insurer, onSelect }: QuoteOfferCardProps) {
   const t = useTranslations("quote.results");
   const tFeatures = useTranslations();
 
@@ -51,6 +53,10 @@ export function QuoteOfferCard({ offer, insurer }: QuoteOfferCardProps) {
           <li key={featureKey}>• {tFeatures(featureKey)}</li>
         ))}
       </ul>
+
+      <Button variant="outline" className="mt-auto" onClick={onSelect}>
+        {t("cta")}
+      </Button>
     </Card>
   );
 }

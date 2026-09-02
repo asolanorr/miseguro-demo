@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { WizardShell } from "@/components/layout/wizard-shell";
+import { Button } from "@/components/ui/button";
 import { DemoNoticeBanner } from "@/components/features/quote/demo-notice-banner";
+import { LeadCaptureDialog } from "@/components/features/quote/lead-capture-dialog";
 import { QuoteResultsList } from "@/components/features/quote/quote-results-list";
 import { ErrorState } from "@/components/ui/error-state";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -60,9 +62,17 @@ export default function ResultsPage() {
   const { data: offers, isLoading, isError, refetch } = useQuoteResults(request);
   const { data: insurers } = useInsurers();
 
+  const [leadDialogOpen, setLeadDialogOpen] = useState(false);
+  const [selectedOfferId, setSelectedOfferId] = useState<string | null>(null);
+
   if (firstMissingStep || !request) {
     return null;
   }
+
+  const openLeadDialog = (offerId: string | null) => {
+    setSelectedOfferId(offerId);
+    setLeadDialogOpen(true);
+  };
 
   return (
     <WizardShell title={t("title")} showNav={false}>
@@ -74,13 +84,30 @@ export default function ResultsPage() {
         ) : isError ? (
           <ErrorState onRetry={() => refetch()} />
         ) : (
-          <QuoteResultsList
-            offers={offers ?? []}
-            insurers={insurers}
-            defaultLevel={request.coverage.level}
-          />
+          <>
+            <QuoteResultsList
+              offers={offers ?? []}
+              insurers={insurers}
+              defaultLevel={request.coverage.level}
+              onSelectOffer={(offerId) => openLeadDialog(offerId)}
+            />
+            <Button
+              variant="outline"
+              className="self-start"
+              onClick={() => openLeadDialog(null)}
+            >
+              {t("generalCta")}
+            </Button>
+          </>
         )}
       </div>
+
+      <LeadCaptureDialog
+        open={leadDialogOpen}
+        onOpenChange={setLeadDialogOpen}
+        request={request}
+        selectedOfferId={selectedOfferId}
+      />
     </WizardShell>
   );
 }

@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 import { DemoBadge } from "@/components/ui/demo-badge";
 import { InsurerAvatar } from "@/components/features/quote/insurer-avatar";
 import type { Insurer } from "@/types";
@@ -8,9 +9,10 @@ import { formatCrc } from "@/lib/utils";
 type QuoteCompareTableProps = {
   offers: QuoteOffer[];
   insurersById: Map<string, Insurer>;
+  onSelectOffer: (offerId: string) => void;
 };
 
-export function QuoteCompareTable({ offers, insurersById }: QuoteCompareTableProps) {
+export function QuoteCompareTable({ offers, insurersById, onSelectOffer }: QuoteCompareTableProps) {
   const t = useTranslations("quote.results");
   const tFeatures = useTranslations();
 
@@ -25,6 +27,9 @@ export function QuoteCompareTable({ offers, insurersById }: QuoteCompareTablePro
             <th className="px-4 py-3 font-medium">{t("table.deductible")}</th>
             <th className="px-4 py-3 font-medium">{t("table.includes")}</th>
             <th className="px-4 py-3 font-medium">{t("table.demo")}</th>
+            <th className="px-4 py-3 font-medium">
+              <span className="sr-only">{t("cta")}</span>
+            </th>
           </tr>
         </thead>
         <tbody className="divide-y divide-border">
@@ -66,6 +71,15 @@ export function QuoteCompareTable({ offers, insurersById }: QuoteCompareTablePro
                 </td>
                 <td className="px-4 py-3">
                   <DemoBadge />
+                </td>
+                <td className="px-4 py-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => onSelectOffer(offer.id)}
+                  >
+                    {t("cta")}
+                  </Button>
                 </td>
               </tr>
             );

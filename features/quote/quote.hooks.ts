@@ -1,7 +1,7 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
-import { postQuotes } from "./quote.api";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { postLead, postQuotes } from "./quote.api";
 import type { QuoteRequest } from "./quote.types";
 
 /**
@@ -15,5 +15,11 @@ export function useQuoteResults(request: QuoteRequest | null) {
     queryFn: () => postQuotes(request as QuoteRequest),
     enabled: request !== null,
     staleTime: Infinity,
+  });
+}
+
+export function useSubmitLead() {
+  return useMutation({
+    mutationFn: postLead,
   });
 }
