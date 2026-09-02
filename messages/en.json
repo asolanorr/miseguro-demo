@@ -5,6 +5,8 @@
     "close": "Close",
     "comingSoon": "Under construction.",
     "demoBadge": "Demo",
+    "back": "Back",
+    "continue": "Continue",
     "errorState": {
       "title": "Something went wrong",
       "description": "We couldn't load this information. Please try again.",
@@ -12,6 +14,169 @@
     },
     "footer": {
       "rights": "All rights reserved."
+    }
+  },
+  "quote": {
+    "stepper": {
+      "profile": "Profile",
+      "vehicle": "Vehicle",
+      "driver": "Driver",
+      "coverage": "Coverage",
+      "results": "Results"
+    },
+    "profile": {
+      "title": "Profile and location",
+      "description": "Tell us where you are so we can fine-tune the comparison.",
+      "province": {
+        "label": "Province",
+        "placeholder": "Select your province",
+        "help": "We use it to estimate traffic risk in your area."
+      },
+      "canton": {
+        "label": "Canton",
+        "placeholder": "Select your canton",
+        "help": "Fine-tunes the quote within your province."
+      },
+      "hasCurrentInsurance": {
+        "label": "Do you currently have car insurance?",
+        "help": "Helps us understand your situation. It doesn't change this demo's price."
+      },
+      "purchaseIntent": {
+        "label": "How soon are you planning to buy?",
+        "help": "Helps us prioritize follow-up. It doesn't change this demo's price.",
+        "options": {
+          "now": "I want to buy soon",
+          "exploring": "Just exploring"
+        }
+      },
+      "errors": {
+        "provinceId": "Select a province",
+        "cantonId": "Select a canton"
+      }
+    },
+    "vehicle": {
+      "title": "Your vehicle",
+      "description": "The vehicle is the factor that weighs the most on price.",
+      "year": {
+        "label": "Year",
+        "placeholder": "Select the year",
+        "help": "Newer vehicles are usually more expensive to insure."
+      },
+      "make": {
+        "label": "Make",
+        "placeholder": "Select the make",
+        "help": "The make's replacement value affects the premium."
+      },
+      "model": {
+        "label": "Model",
+        "placeholder": "Select the model",
+        "help": "We need the exact model to identify the vehicle."
+      },
+      "trim": {
+        "label": "Trim",
+        "placeholder": "Select the trim",
+        "help": "The trim determines the equipment and insured value."
+      },
+      "ownership": {
+        "label": "Ownership",
+        "help": "Some coverages are required depending on how you own the vehicle.",
+        "options": {
+          "owned": "Mine, no financing",
+          "financed": "I'm paying it off (loan)",
+          "leased": "Leased"
+        }
+      },
+      "use": {
+        "label": "Main use",
+        "help": "How you use the vehicle changes the estimated risk.",
+        "options": {
+          "commuting": "To commute to work or school",
+          "pleasure": "Personal use only",
+          "business": "For work or business"
+        }
+      },
+      "annualKm": {
+        "label": "Kilometers driven per year",
+        "help": "Higher mileage means more exposure to risk."
+      },
+      "errors": {
+        "year": "Select the year",
+        "makeId": "Select the make",
+        "modelId": "Select the model",
+        "trimId": "Select the trim",
+        "ownership": "Select the ownership type",
+        "use": "Select the main use",
+        "annualKm": "Enter a valid mileage"
+      }
+    },
+    "driver": {
+      "title": "You as a driver",
+      "description": "Your driver profile also affects the price.",
+      "birthDate": {
+        "label": "Date of birth",
+        "help": "Age is one of the factors that most affects the price."
+      },
+      "licenseYears": {
+        "label": "Years holding a driver's license",
+        "help": "More driving experience lowers the estimated risk."
+      },
+      "claimsLast3Years": {
+        "label": "Claims filed in the last 3 years",
+        "help": "Recent claims increase the premium."
+      },
+      "errors": {
+        "birthDate": "Enter a valid date (you must be an adult)",
+        "licenseYears": "Enter a valid number of years",
+        "claimsLast3Years": "Enter a valid number (0 to 5)",
+        "consentAccepted": "You must accept the consent to continue"
+      }
+    },
+    "coverage": {
+      "title": "Desired coverage",
+      "description": "Pick the protection level you're after. You'll be able to compare all three on the results screen.",
+      "level": {
+        "label": "Coverage level",
+        "help": "Determines what's protected. You can change it later from the results."
+      },
+      "preferredDeductibleCrc": {
+        "label": "Preferred deductible (optional)",
+        "placeholder": "E.g. 300000",
+        "help": "A higher deductible usually lowers the monthly premium."
+      },
+      "errors": {
+        "level": "Select a coverage level",
+        "preferredDeductibleCrc": "Enter a valid amount in colones"
+      }
+    }
+  },
+  "consent": {
+    "notice": "I agree that MiSeguro may collect and use my personal data to generate this demo quote and, if I request it, to have an advisor contact me. I can request deletion of my data at any time, in accordance with Costa Rica's Personal Data Protection Law (Law 8968).",
+    "error": "You must accept the consent to continue"
+  },
+  "coverage": {
+    "levels": {
+      "liability": {
+        "name": "Third-party liability",
+        "description": "Basic legally required coverage for damage to third parties."
+      },
+      "extended": {
+        "name": "Extended",
+        "description": "Third-party liability plus theft, fire, and natural disasters."
+      },
+      "full": {
+        "name": "Full coverage",
+        "description": "The most complete coverage, includes own-damage collision."
+      }
+    },
+    "features": {
+      "thirdPartyLiability": "Third-party liability",
+      "legalAssistance": "Legal assistance",
+      "theft": "Theft",
+      "fire": "Fire",
+      "naturalDisaster": "Natural disasters",
+      "collisionOwnDamage": "Own-damage collision",
+      "roadsideAssistance": "Roadside assistance",
+      "replacementVehicle": "Replacement vehicle"
     }
   }
 }

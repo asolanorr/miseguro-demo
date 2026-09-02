@@ -29,13 +29,17 @@ export const vehicleSchema = z.object({
 });
 
 export const driverSchema = z.object({
+  // Los mensajes de error de este schema no se muestran directamente: los
+  // formularios traducen el error a texto vía messages/*.json a partir del
+  // nombre del campo (features/quote/*-form.tsx), nunca del string que
+  // arme Zod, para no meter texto visible en un archivo sin acceso a i18n.
   birthDate: z
     .string()
-    .regex(/^\d{4}-\d{2}-\d{2}$/, "Fecha inválida")
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
     .refine((value) => {
       const year = Number(value.slice(0, 4));
       return year >= MIN_DRIVER_BIRTH_YEAR && year <= MAX_DRIVER_BIRTH_YEAR;
-    }, `El conductor debe tener entre ${VEHICLE_YEAR_MAX - MIN_DRIVER_BIRTH_YEAR} y ${MIN_DRIVER_AGE} años como mínimo`),
+    }),
   licenseYears: z.number().int().min(0).max(80),
   claimsLast3Years: z.number().int().min(0).max(MAX_CLAIMS_LAST_3_YEARS),
   consentAccepted: z.literal(true),

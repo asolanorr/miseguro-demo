@@ -5,6 +5,8 @@
     "close": "Cerrar",
     "comingSoon": "En construcción.",
     "demoBadge": "Demo",
+    "back": "Atrás",
+    "continue": "Continuar",
     "errorState": {
       "title": "Algo salió mal",
       "description": "No pudimos cargar esta información. Probá de nuevo.",
@@ -12,6 +14,169 @@
     },
     "footer": {
       "rights": "Todos los derechos reservados."
+    }
+  },
+  "quote": {
+    "stepper": {
+      "profile": "Perfil",
+      "vehicle": "Vehículo",
+      "driver": "Conductor",
+      "coverage": "Cobertura",
+      "results": "Resultados"
+    },
+    "profile": {
+      "title": "Perfil y ubicación",
+      "description": "Contános dónde estás para afinar la comparación.",
+      "province": {
+        "label": "Provincia",
+        "placeholder": "Seleccioná tu provincia",
+        "help": "La usamos para estimar el riesgo de tránsito de tu zona."
+      },
+      "canton": {
+        "label": "Cantón",
+        "placeholder": "Seleccioná tu cantón",
+        "help": "Afina la cotización dentro de tu provincia."
+      },
+      "hasCurrentInsurance": {
+        "label": "¿Tenés seguro de auto actualmente?",
+        "help": "Nos ayuda a entender tu situación. No cambia el precio de esta demo."
+      },
+      "purchaseIntent": {
+        "label": "¿Qué tan pronto pensás contratar?",
+        "help": "Nos ayuda a priorizar el seguimiento. No cambia el precio de esta demo.",
+        "options": {
+          "now": "Quiero contratar pronto",
+          "exploring": "Solo estoy explorando"
+        }
+      },
+      "errors": {
+        "provinceId": "Seleccioná una provincia",
+        "cantonId": "Seleccioná un cantón"
+      }
+    },
+    "vehicle": {
+      "title": "Tu vehículo",
+      "description": "El vehículo es el factor que más pesa en el precio.",
+      "year": {
+        "label": "Año",
+        "placeholder": "Seleccioná el año",
+        "help": "Los vehículos más nuevos suelen costar más asegurar."
+      },
+      "make": {
+        "label": "Marca",
+        "placeholder": "Seleccioná la marca",
+        "help": "El valor de reposición de la marca influye en la prima."
+      },
+      "model": {
+        "label": "Modelo",
+        "placeholder": "Seleccioná el modelo",
+        "help": "Necesitamos el modelo exacto para ubicar el vehículo."
+      },
+      "trim": {
+        "label": "Versión",
+        "placeholder": "Seleccioná la versión",
+        "help": "La versión determina el equipamiento y el valor asegurado."
+      },
+      "ownership": {
+        "label": "Tenencia",
+        "help": "Algunas coberturas son obligatorias según cómo tenés el vehículo.",
+        "options": {
+          "owned": "Es mío, sin financiamiento",
+          "financed": "Lo estoy pagando (crédito)",
+          "leased": "Es arrendado (leasing)"
+        }
+      },
+      "use": {
+        "label": "Uso principal",
+        "help": "El uso que le das al vehículo cambia el riesgo de siniestro.",
+        "options": {
+          "commuting": "Para ir al trabajo o estudio",
+          "pleasure": "Solo para uso personal",
+          "business": "Para trabajo o negocio"
+        }
+      },
+      "annualKm": {
+        "label": "Kilómetros que recorrés al año",
+        "help": "A mayor kilometraje, mayor exposición al riesgo."
+      },
+      "errors": {
+        "year": "Seleccioná el año",
+        "makeId": "Seleccioná la marca",
+        "modelId": "Seleccioná el modelo",
+        "trimId": "Seleccioná la versión",
+        "ownership": "Seleccioná la tenencia",
+        "use": "Seleccioná el uso principal",
+        "annualKm": "Ingresá un kilometraje válido"
+      }
+    },
+    "driver": {
+      "title": "Vos como conductor",
+      "description": "Tu perfil como conductor también influye en el precio.",
+      "birthDate": {
+        "label": "Fecha de nacimiento",
+        "help": "La edad es uno de los factores que más influye en el precio."
+      },
+      "licenseYears": {
+        "label": "Años con licencia de conducir",
+        "help": "Más experiencia al volante reduce el riesgo estimado."
+      },
+      "claimsLast3Years": {
+        "label": "Siniestros reportados en los últimos 3 años",
+        "help": "Los siniestros recientes incrementan la prima."
+      },
+      "errors": {
+        "birthDate": "Ingresá una fecha válida (debés ser mayor de edad)",
+        "licenseYears": "Ingresá un número de años válido",
+        "claimsLast3Years": "Ingresá un número válido (0 a 5)",
+        "consentAccepted": "Debés aceptar el consentimiento para continuar"
+      }
+    },
+    "coverage": {
+      "title": "Cobertura deseada",
+      "description": "Elegí el nivel de protección que buscás. Vas a poder comparar los tres en los resultados.",
+      "level": {
+        "label": "Nivel de cobertura",
+        "help": "Determina qué queda protegido. Podés cambiarlo después desde los resultados."
+      },
+      "preferredDeductibleCrc": {
+        "label": "Deducible preferido (opcional)",
+        "placeholder": "Ej. 300000",
+        "help": "Un deducible más alto suele bajar la prima mensual."
+      },
+      "errors": {
+        "level": "Seleccioná un nivel de cobertura",
+        "preferredDeductibleCrc": "Ingresá un monto válido en colones"
+      }
+    }
+  },
+  "consent": {
+    "notice": "Acepto que MiSeguro recopile y utilice mis datos personales para generar esta cotización de demostración y, si lo solicito, para que un asesor se contacte conmigo. Puedo solicitar la eliminación de mis datos en cualquier momento, conforme a la Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales (Ley 8968).",
+    "error": "Debés aceptar el consentimiento para continuar"
+  },
+  "coverage": {
+    "levels": {
+      "liability": {
+        "name": "Responsabilidad civil",
+        "description": "Cobertura básica exigida por ley para daños a terceros."
+      },
+      "extended": {
+        "name": "Extendida",
+        "description": "Responsabilidad civil más robo, incendio y fenómenos naturales."
+      },
+      "full": {
+        "name": "Todo riesgo",
+        "description": "La cobertura más completa, incluye daños propios por colisión."
+      }
+    },
+    "features": {
+      "thirdPartyLiability": "Responsabilidad civil ante terceros",
+      "legalAssistance": "Asistencia legal",
+      "theft": "Robo o hurto",
+      "fire": "Incendio",
+      "naturalDisaster": "Fenómenos naturales",
+      "collisionOwnDamage": "Daños propios por colisión",
+      "roadsideAssistance": "Asistencia en carretera",
+      "replacementVehicle": "Vehículo de reemplazo"
     }
   }
 }
