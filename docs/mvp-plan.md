@@ -783,7 +783,13 @@ endpoints existan.
 2. "Cómo funciona" en 3 pasos.
 3. Franja de aseguradoras ficticias con nota de demo.
 4. FAQ de 4–5 preguntas (`landing.faq.*`).
-5. `landing.demoNotice` discreto pero presente.
+5. ~~`landing.demoNotice` discreto pero presente.~~ **Deviación post-M8:** a pedido explícito
+   del producto, se sacó de la landing para que la experiencia se sienta más inmersiva. Esto no
+   afecta el requisito legal no negociable de §1.1: ese banner vive únicamente en la pantalla de
+   resultados (donde aparecen los montos inventados) y sigue siendo permanente, sin botón de
+   cierre. El `DemoBadge` de cada tarjeta también se hizo más discreto visualmente (ícono +
+   texto chico en vez de badge con fondo de warning), pero sigue presente en cada tarjeta sin
+   poder ocultarse.
 6. Metadata: título, descripción, Open Graph.
 
 **Criterios de aceptación**

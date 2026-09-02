@@ -17,7 +17,6 @@
     }
   },
   "landing": {
-    "demoNotice": "MiSeguro is in demo mode: the prices you'll see are simulated.",
     "hero": {
       "title": "Compare car insurance in minutes, no calls or paperwork",
       "subtitle": "Tell us about you and your vehicle, and we'll show you options from several insurers side by side.",

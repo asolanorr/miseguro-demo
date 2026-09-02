@@ -40,9 +40,6 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-16 pb-16">
       <section className="mx-auto flex w-full max-w-2xl flex-col items-center gap-5 px-4 pt-10 text-center sm:pt-14">
-        <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-          {t("landing.demoNotice")}
-        </p>
         <h1 className="text-3xl font-semibold text-foreground sm:text-4xl">
           {t("landing.hero.title")}
         </h1>
