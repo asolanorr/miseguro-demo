@@ -1,0 +1,14 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "email": "Email",
+    "password": "Password"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "welcomeBack": "Welcome back",
+    "createAccount": "Create account"
+  }
+}
