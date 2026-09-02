@@ -1,6 +1,17 @@
 {
   "common": {
     "save": "Guardar",
-    "cancel": "Cancelar"
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "comingSoon": "En construcción.",
+    "demoBadge": "Demo",
+    "errorState": {
+      "title": "Algo salió mal",
+      "description": "No pudimos cargar esta información. Probá de nuevo.",
+      "retry": "Reintentar"
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados."
+    }
   }
 }

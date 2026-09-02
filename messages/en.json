@@ -1,6 +1,17 @@
 {
   "common": {
     "save": "Save",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "close": "Close",
+    "comingSoon": "Under construction.",
+    "demoBadge": "Demo",
+    "errorState": {
+      "title": "Something went wrong",
+      "description": "We couldn't load this information. Please try again.",
+      "retry": "Retry"
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    }
   }
 }
