@@ -63,6 +63,19 @@ export const quoteRequestSchema = z.object({
   coverage: coverageSchema,
 });
 
+export const quoteOfferSchema = z.object({
+  id: z.string().min(1),
+  insurerId: z.string().min(1),
+  coverageLevel: z.enum(["liability", "extended", "full"]),
+  monthlyPremiumCrc: z.number(),
+  annualPremiumCrc: z.number(),
+  deductibleCrc: z.number(),
+  includedFeatures: z.array(z.string()),
+  isDemo: z.literal(true),
+});
+
+export const quoteOffersResponseSchema = z.array(quoteOfferSchema);
+
 export const leadSchema = z.object({
   email: z.string().email(),
   fullName: z.string().min(1),

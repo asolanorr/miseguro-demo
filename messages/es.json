@@ -147,6 +147,36 @@
         "level": "Seleccioná un nivel de cobertura",
         "preferredDeductibleCrc": "Ingresá un monto válido en colones"
       }
+    },
+    "results": {
+      "title": "Comparación de resultados",
+      "demoNotice": "Datos de demostración. Estos montos son ilustrativos y no constituyen una cotización real ni una oferta de ninguna aseguradora.",
+      "rating": "★ {rating}",
+      "perMonth": "/mes",
+      "perYear": "al año",
+      "deductible": "Deducible",
+      "filters": {
+        "level": "Nivel de cobertura",
+        "sort": "Ordenar por",
+        "sortOptions": {
+          "priceAsc": "Precio: menor a mayor",
+          "priceDesc": "Precio: mayor a menor",
+          "rating": "Calificación"
+        }
+      },
+      "table": {
+        "insurer": "Aseguradora",
+        "monthly": "Prima mensual",
+        "annual": "Prima anual",
+        "deductible": "Deducible",
+        "includes": "Incluye",
+        "demo": "Demo"
+      },
+      "savings": {
+        "lowest": "Oferta más baja",
+        "highest": "Oferta más alta",
+        "difference": "Diferencia anual"
+      }
     }
   },
   "consent": {

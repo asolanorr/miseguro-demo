@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -47,6 +48,17 @@ export function ProfileForm() {
   const provinceId = watch("provinceId");
   const { data: cantons } = useCantons(provinceId || undefined);
 
+  // Select (Base UI) necesita `items` para resolver la etiqueta mostrada en
+  // el trigger; sin esto, muestra el value crudo (el id) en vez del name.
+  const provinceItems = useMemo(
+    () => provinces?.map((province) => ({ value: province.id, label: province.name })) ?? [],
+    [provinces],
+  );
+  const cantonItems = useMemo(
+    () => cantons?.map((canton) => ({ value: canton.id, label: canton.name })) ?? [],
+    [cantons],
+  );
+
   const onSubmit = (values: QuoteProfile) => {
     setProfile(values);
     router.push("/quote/vehicle");
@@ -68,6 +80,7 @@ export function ProfileForm() {
                     field.onChange(value);
                     setValue("cantonId", "");
                   }}
+                  items={provinceItems}
                 >
                   <SelectTrigger id="provinceId" className="w-full" aria-invalid={Boolean(errors.provinceId)}>
                     <SelectValue placeholder={t("province.placeholder")} />
@@ -98,6 +111,7 @@ export function ProfileForm() {
                   value={field.value}
                   onValueChange={field.onChange}
                   disabled={!provinceId}
+                  items={cantonItems}
                 >
                   <SelectTrigger id="cantonId" className="w-full" aria-invalid={Boolean(errors.cantonId)}>
                     <SelectValue placeholder={t("canton.placeholder")} />

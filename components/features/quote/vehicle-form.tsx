@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { Controller, useForm, type Resolver } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -74,6 +75,25 @@ export function VehicleForm() {
   const { data: models } = useVehicleModels(makeId || undefined);
   const { data: trims } = useVehicleTrims(modelId || undefined);
 
+  // Select (Base UI) necesita `items` para resolver la etiqueta mostrada en
+  // el trigger; sin esto, muestra el value crudo (el id) en vez del name.
+  const yearItems = useMemo(
+    () => VEHICLE_YEARS.map((vehicleYear) => ({ value: String(vehicleYear), label: String(vehicleYear) })),
+    [],
+  );
+  const makeItems = useMemo(
+    () => makes?.map((make) => ({ value: make.id, label: make.name })) ?? [],
+    [makes],
+  );
+  const modelItems = useMemo(
+    () => models?.map((model) => ({ value: model.id, label: model.name })) ?? [],
+    [models],
+  );
+  const trimItems = useMemo(
+    () => trims?.map((trim) => ({ value: trim.id, label: trim.name })) ?? [],
+    [trims],
+  );
+
   const onSubmit = (values: VehicleFormValues) => {
     setVehicle(values as QuoteVehicle);
     router.push("/quote/driver");
@@ -102,6 +122,7 @@ export function VehicleForm() {
                     setValue("modelId", "");
                     setValue("trimId", "");
                   }}
+                  items={yearItems}
                 >
                   <SelectTrigger id="year" className="w-full" aria-invalid={Boolean(errors.year)}>
                     <SelectValue placeholder={t("year.placeholder")} />
@@ -134,6 +155,7 @@ export function VehicleForm() {
                     setValue("trimId", "");
                   }}
                   disabled={!year}
+                  items={makeItems}
                 >
                   <SelectTrigger id="makeId" className="w-full" aria-invalid={Boolean(errors.makeId)}>
                     <SelectValue placeholder={t("make.placeholder")} />
@@ -167,6 +189,7 @@ export function VehicleForm() {
                     setValue("trimId", "");
                   }}
                   disabled={!makeId}
+                  items={modelItems}
                 >
                   <SelectTrigger id="modelId" className="w-full" aria-invalid={Boolean(errors.modelId)}>
                     <SelectValue placeholder={t("model.placeholder")} />
@@ -193,7 +216,12 @@ export function VehicleForm() {
               control={control}
               name="trimId"
               render={({ field }) => (
-                <Select value={field.value} onValueChange={field.onChange} disabled={!modelId}>
+                <Select
+                  value={field.value}
+                  onValueChange={field.onChange}
+                  disabled={!modelId}
+                  items={trimItems}
+                >
                   <SelectTrigger id="trimId" className="w-full" aria-invalid={Boolean(errors.trimId)}>
                     <SelectValue placeholder={t("trim.placeholder")} />
                   </SelectTrigger>

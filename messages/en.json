@@ -147,6 +147,36 @@
         "level": "Select a coverage level",
         "preferredDeductibleCrc": "Enter a valid amount in colones"
       }
+    },
+    "results": {
+      "title": "Results comparison",
+      "demoNotice": "Demo data. These amounts are illustrative and do not constitute a real quote or an offer from any insurer.",
+      "rating": "★ {rating}",
+      "perMonth": "/mo",
+      "perYear": "per year",
+      "deductible": "Deductible",
+      "filters": {
+        "level": "Coverage level",
+        "sort": "Sort by",
+        "sortOptions": {
+          "priceAsc": "Price: low to high",
+          "priceDesc": "Price: high to low",
+          "rating": "Rating"
+        }
+      },
+      "table": {
+        "insurer": "Insurer",
+        "monthly": "Monthly premium",
+        "annual": "Annual premium",
+        "deductible": "Deductible",
+        "includes": "Includes",
+        "demo": "Demo"
+      },
+      "savings": {
+        "lowest": "Lowest offer",
+        "highest": "Highest offer",
+        "difference": "Annual difference"
+      }
     }
   },
   "consent": {
