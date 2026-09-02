@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { DemoBadge } from "@/components/ui/demo-badge";
 import { InsurerAvatar } from "@/components/features/quote/insurer-avatar";
 import type { Insurer } from "@/types";
 import type { QuoteOffer } from "@/features/quote/quote.types";
@@ -26,7 +25,6 @@ export function QuoteCompareTable({ offers, insurersById, onSelectOffer }: Quote
             <th className="px-4 py-3 font-medium">{t("table.annual")}</th>
             <th className="px-4 py-3 font-medium">{t("table.deductible")}</th>
             <th className="px-4 py-3 font-medium">{t("table.includes")}</th>
-            <th className="px-4 py-3 font-medium">{t("table.demo")}</th>
             <th className="px-4 py-3 font-medium">
               <span className="sr-only">{t("cta")}</span>
             </th>
@@ -68,9 +66,6 @@ export function QuoteCompareTable({ offers, insurersById, onSelectOffer }: Quote
                       <li key={featureKey}>{tFeatures(featureKey)}</li>
                     ))}
                   </ul>
-                </td>
-                <td className="px-4 py-3">
-                  <DemoBadge />
                 </td>
                 <td className="px-4 py-3">
                   <Button

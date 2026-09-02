@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { DemoBadge } from "@/components/ui/demo-badge";
 import { InsurerAvatar } from "@/components/features/quote/insurer-avatar";
 import type { Insurer } from "@/types";
 import type { QuoteOffer } from "@/features/quote/quote.types";
@@ -19,19 +18,16 @@ export function QuoteOfferCard({ offer, insurer, onSelect }: QuoteOfferCardProps
 
   return (
     <Card className="flex flex-col gap-4 p-4">
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex items-center gap-2.5">
-          <InsurerAvatar name={insurer?.name ?? "?"} colorToken={insurer?.colorToken ?? ""} />
-          <div>
-            <p className="text-sm font-semibold text-foreground">{insurer?.name}</p>
-            {insurer ? (
-              <p className="text-xs text-muted-foreground">
-                {t("rating", { rating: insurer.rating.toFixed(1) })}
-              </p>
-            ) : null}
-          </div>
+      <div className="flex items-center gap-2.5">
+        <InsurerAvatar name={insurer?.name ?? "?"} colorToken={insurer?.colorToken ?? ""} />
+        <div>
+          <p className="text-sm font-semibold text-foreground">{insurer?.name}</p>
+          {insurer ? (
+            <p className="text-xs text-muted-foreground">
+              {t("rating", { rating: insurer.rating.toFixed(1) })}
+            </p>
+          ) : null}
         </div>
-        <DemoBadge />
       </div>
 
       <div>

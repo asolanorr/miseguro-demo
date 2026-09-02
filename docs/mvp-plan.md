@@ -56,6 +56,20 @@ Requisitos de producto, no sugerencias. Aplican a todo el código y a toda la UI
 
 ### 1.1 Los resultados van marcados como demostración, siempre
 
+> **Revocado post-M8, decisión explícita del producto (no del agente).** El banner permanente,
+> el `DemoBadge` de cada tarjeta/fila y `quote.results.demoNotice` se **eliminaron por completo**
+> de la pantalla de resultados a pedido directo: el objetivo pasó a ser una experiencia inmersiva
+> para mostrar como prueba de concepto, no un producto expuesto a consumidores reales. El agente
+> señaló el riesgo de publicidad engañosa descrito abajo dos veces antes de ejecutar el cambio; el
+> dueño del producto lo asumió con el argumento de que (a) es un POC, no algo que un consumidor
+> vaya a usar para contratar, y (b) los nombres de aseguradora ya son ficticios (§1.2), así que no
+> hay una aseguradora real a la que se le esté atribuyendo un precio falso. `isDemo: true` **sigue
+> existiendo** en el tipo `QuoteOffer` (dato interno, no se muestra en la UI) y los nombres siguen
+> siendo ficticios — eso no cambió. Si este producto pasa de POC a algo que vea un consumidor real,
+> este banner debería volver a activarse.
+>
+> Texto original de esta sección, como referencia de por qué existía:
+
 Los precios son inventados. Presentarlos como cotizaciones reales es engañoso y, en Costa Rica,
 expone a un problema de publicidad engañosa bajo la Ley de Promoción de la Competencia y Defensa
 Efectiva del Consumidor. Por lo tanto:
@@ -724,9 +738,9 @@ endpoints existan.
 
 **Criterios de aceptación**
 
-- [ ] En 375×667, el banner de demo cumple `getBoundingClientRect().bottom <= window.innerHeight`
-      sin scroll, y no tiene control de cierre.
-- [ ] Cada tarjeta muestra `DemoBadge`.
+- [x] ~~En 375×667, el banner de demo cumple...~~ ~~Cada tarjeta muestra `DemoBadge`.~~
+      **Ambos criterios quedaron sin objeto tras la deviación de §1.1**: el banner y el badge se
+      eliminaron por completo a pedido del producto.
 - [ ] Cambiar filtro u orden **no** dispara una nueva petición (verificado contando requests a
       `/api/quotes` en el E2E).
 - [ ] Mientras carga hay skeletons, no un spinner.
@@ -783,13 +797,9 @@ endpoints existan.
 2. "Cómo funciona" en 3 pasos.
 3. Franja de aseguradoras ficticias con nota de demo.
 4. FAQ de 4–5 preguntas (`landing.faq.*`).
-5. ~~`landing.demoNotice` discreto pero presente.~~ **Deviación post-M8:** a pedido explícito
-   del producto, se sacó de la landing para que la experiencia se sienta más inmersiva. Esto no
-   afecta el requisito legal no negociable de §1.1: ese banner vive únicamente en la pantalla de
-   resultados (donde aparecen los montos inventados) y sigue siendo permanente, sin botón de
-   cierre. El `DemoBadge` de cada tarjeta también se hizo más discreto visualmente (ícono +
-   texto chico en vez de badge con fondo de warning), pero sigue presente en cada tarjeta sin
-   poder ocultarse.
+5. ~~`landing.demoNotice` discreto pero presente.~~ **Deviación post-M8:** se sacó de la landing
+   a pedido del producto (ver §1.1 para la deviación mayor: el banner y el `DemoBadge` de
+   resultados también se terminaron eliminando por completo, no solo de la landing).
 6. Metadata: título, descripción, Open Graph.
 
 **Criterios de aceptación**

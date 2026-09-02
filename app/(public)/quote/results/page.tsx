@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { WizardShell } from "@/components/layout/wizard-shell";
 import { Button } from "@/components/ui/button";
-import { DemoNoticeBanner } from "@/components/features/quote/demo-notice-banner";
 import { LeadCaptureDialog } from "@/components/features/quote/lead-capture-dialog";
 import { QuoteResultsList } from "@/components/features/quote/quote-results-list";
 import { ErrorState } from "@/components/ui/error-state";
@@ -77,8 +76,6 @@ export default function ResultsPage() {
   return (
     <WizardShell title={t("title")} showNav={false} wide>
       <div className="flex flex-col gap-6">
-        <DemoNoticeBanner />
-
         {isLoading || !insurers ? (
           <ResultsSkeleton />
         ) : isError ? (

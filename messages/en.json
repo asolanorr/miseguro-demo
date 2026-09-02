@@ -4,7 +4,6 @@
     "cancel": "Cancel",
     "close": "Close",
     "comingSoon": "Under construction.",
-    "demoBadge": "Demo",
     "back": "Back",
     "continue": "Continue",
     "errorState": {
@@ -203,7 +202,6 @@
     },
     "results": {
       "title": "Results comparison",
-      "demoNotice": "Demo data. These amounts are illustrative and do not constitute a real quote or an offer from any insurer.",
       "rating": "★ {rating}",
       "perMonth": "/mo",
       "perYear": "per year",
@@ -222,8 +220,7 @@
         "monthly": "Monthly premium",
         "annual": "Annual premium",
         "deductible": "Deductible",
-        "includes": "Includes",
-        "demo": "Demo"
+        "includes": "Includes"
       },
       "savings": {
         "lowest": "Lowest offer",

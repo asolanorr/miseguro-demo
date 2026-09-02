@@ -4,7 +4,6 @@
     "cancel": "Cancelar",
     "close": "Cerrar",
     "comingSoon": "En construcción.",
-    "demoBadge": "Demo",
     "back": "Atrás",
     "continue": "Continuar",
     "errorState": {
@@ -203,7 +202,6 @@
     },
     "results": {
       "title": "Comparación de resultados",
-      "demoNotice": "Datos de demostración. Estos montos son ilustrativos y no constituyen una cotización real ni una oferta de ninguna aseguradora.",
       "rating": "★ {rating}",
       "perMonth": "/mes",
       "perYear": "al año",
@@ -222,8 +220,7 @@
         "monthly": "Prima mensual",
         "annual": "Prima anual",
         "deductible": "Deducible",
-        "includes": "Incluye",
-        "demo": "Demo"
+        "includes": "Incluye"
       },
       "savings": {
         "lowest": "Oferta más baja",
