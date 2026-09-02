@@ -154,10 +154,10 @@
         "help": "A mayor kilometraje, mayor exposición al riesgo."
       },
       "errors": {
-        "year": "Seleccioná el año",
-        "makeId": "Seleccioná la marca",
-        "modelId": "Seleccioná el modelo",
-        "trimId": "Seleccioná la versión",
+        "year": "Debés seleccionar el año",
+        "makeId": "Debés seleccionar la marca",
+        "modelId": "Debés seleccionar el modelo",
+        "trimId": "Debés seleccionar la versión",
         "ownership": "Seleccioná la tenencia",
         "use": "Seleccioná el uso principal",
         "annualKm": "Ingresá un kilometraje válido"

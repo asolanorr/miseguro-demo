@@ -154,10 +154,10 @@
         "help": "Higher mileage means more exposure to risk."
       },
       "errors": {
-        "year": "Select the year",
-        "makeId": "Select the make",
-        "modelId": "Select the model",
-        "trimId": "Select the trim",
+        "year": "You must select the year",
+        "makeId": "You must select the make",
+        "modelId": "You must select the model",
+        "trimId": "You must select the trim",
         "ownership": "Select the ownership type",
         "use": "Select the main use",
         "annualKm": "Enter a valid mileage"
