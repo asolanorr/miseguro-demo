@@ -75,7 +75,7 @@ export default function ResultsPage() {
   };
 
   return (
-    <WizardShell title={t("title")} showNav={false}>
+    <WizardShell title={t("title")} showNav={false} wide>
       <div className="flex flex-col gap-6">
         <DemoNoticeBanner />
 
