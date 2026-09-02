@@ -1,14 +1,6 @@
 {
   "common": {
     "save": "Guardar",
-    "cancel": "Cancelar",
-    "email": "Correo electrónico",
-    "password": "Contraseña"
-  },
-  "auth": {
-    "login": "Iniciar sesión",
-    "register": "Registrarse",
-    "welcomeBack": "Bienvenido de nuevo",
-    "createAccount": "Crear cuenta"
+    "cancel": "Cancelar"
   }
 }
